@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Box, Button } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Box, Button, Stack, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { pieChartData } from '../data/mockData';
 
+// Dados do usuário logado (em uma aplicação real, isso viria de um contexto de autenticação ou API)
+const loggedUser = {
+  name: "João Silva",
+  role: "Analista de Dados"
+};
+
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const theme = useTheme(); // Obtém o tema atual
   const [anchorElDepartments, setAnchorElDepartments] = useState(null);
   const [anchorElProfile, setAnchorElProfile] = useState(null);
   
@@ -46,7 +53,14 @@ const Navbar = () => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <AppBar position="fixed">
+    <AppBar 
+      position="fixed" 
+      sx={{ 
+        backgroundColor: theme.palette.background.default,
+        color: theme.palette.text.primary
+      }}
+      elevation={1}
+    >
       <Toolbar>
         <IconButton
           edge="start"
@@ -96,7 +110,7 @@ const Navbar = () => {
         {/* Botão para voltar ao dashboard principal - só aparece quando não estamos na página inicial */}
         {!isHomePage && (
           <Button 
-            color="inherit" 
+            color="primary" 
             startIcon={<HomeIcon />} 
             onClick={handleDashboardClick}
             sx={{ mr: 2 }}
@@ -105,9 +119,24 @@ const Navbar = () => {
           </Button>
         )}
         
-        <Box>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {/* Informações do usuário logado */}
+          <Stack 
+            direction="column" 
+            alignItems="flex-end" 
+            spacing={0} 
+            sx={{ mr: 1, display: { xs: 'none', sm: 'flex' } }}
+          >
+            <Typography variant="body2" sx={{ fontWeight: 'bold', lineHeight: 1.2 }}>
+              {loggedUser.name}
+            </Typography>
+            <Typography variant="caption" sx={{ lineHeight: 1.2 }}>
+              {loggedUser.role}
+            </Typography>
+          </Stack>
+          
           <IconButton
-            color="inherit"
+            color="primary"
             onClick={handleProfileMenuOpen}
             aria-label="perfil do usuário"
           >
