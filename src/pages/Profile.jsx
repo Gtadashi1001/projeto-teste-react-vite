@@ -21,8 +21,8 @@ const Profile = () => {
           
           <Box mb={3}>
             <Typography variant="h6" gutterBottom>Informações Pessoais</Typography>
-            <Typography variant="body1">Nome: Usuário Exemplo</Typography>
-            <Typography variant="body1">Email: usuario@exemplo.com</Typography>
+            <Typography variant="body1">Nome: João Silva</Typography>
+            <Typography variant="body1">Email: joaosilva@gmail.com</Typography>
             <Typography variant="body1">Cargo: Analista de Dados</Typography>
             <Typography variant="body1">Departamento: Desenvolvimento</Typography>
           </Box>

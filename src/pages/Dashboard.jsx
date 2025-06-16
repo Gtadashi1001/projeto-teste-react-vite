@@ -55,7 +55,7 @@ const Dashboard = () => {
             }}
           >
             <Typography variant="h6" gutterBottom component="div">
-              Distribuição por Departamento
+              Sentimentos
             </Typography>
             <Box sx={{ flex: 1, position: 'relative' }}>
               <Pie 

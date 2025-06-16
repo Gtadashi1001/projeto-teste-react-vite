@@ -1,6 +1,6 @@
 // Dados mockados para o gráfico de pizza
 export const pieChartData = {
-  labels: ['Vendas', 'Marketing', 'Desenvolvimento', 'Suporte', 'Administração'],
+  labels: ['Estresse', 'Tristeza', 'Alegria', 'Cansaço', 'Ansiedade'],
   datasets: [
     {
       data: [35, 25, 20, 15, 5],
@@ -24,42 +24,42 @@ export const pieChartData = {
 
 // Dados mockados para os gráficos de barras correspondentes a cada categoria
 export const barChartData = {
-  'Vendas': {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  'Estresse': {
+    labels: ['T.I', 'RH', 'Marketing', 'Engenharia', 'Financeiro', 'Vendas'],
     datasets: [{
-      label: 'Vendas por mês',
+      label: 'Quantidade de Pessoas',
       data: [12, 19, 15, 8, 22, 14],
       backgroundColor: '#FF6384',
     }]
   },
-  'Marketing': {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  'Tristeza': {
+    labels: ['T.I', 'RH', 'Marketing', 'Engenharia', 'Financeiro', 'Vendas'],
     datasets: [{
-      label: 'Gastos com Marketing',
+      label: 'Quantidade de Pessoas',
       data: [8, 12, 10, 15, 7, 11],
       backgroundColor: '#36A2EB',
     }]
   },
-  'Desenvolvimento': {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  'Alegria': {
+    labels: ['T.I', 'RH', 'Marketing', 'Engenharia', 'Financeiro', 'Vendas'],
     datasets: [{
-      label: 'Horas de Desenvolvimento',
+      label: 'Quantidade de Pessoas',
       data: [20, 25, 30, 22, 18, 28],
       backgroundColor: '#FFCE56',
     }]
   },
-  'Suporte': {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  'Cansaço': {
+    labels: ['T.I', 'RH', 'Marketing', 'Engenharia', 'Financeiro', 'Vendas'],
     datasets: [{
-      label: 'Tickets de Suporte',
+      label: 'Quantidade de Pessoas',
       data: [45, 38, 42, 50, 35, 40],
       backgroundColor: '#4BC0C0',
     }]
   },
-  'Administração': {
-    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  'Ansiedade': {
+    labels: ['T.I', 'RH', 'Marketing', 'Engenharia', 'Financeiro', 'Vendas'],
     datasets: [{
-      label: 'Custos Administrativos',
+      label: 'Quantidade de Pessoas',
       data: [5, 4, 6, 3, 7, 4],
       backgroundColor: '#9966FF',
     }]

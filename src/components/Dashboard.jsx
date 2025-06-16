@@ -15,6 +15,7 @@ ChartJS.register(
   Title
 );
 
+
 const Dashboard = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -66,13 +67,13 @@ const Dashboard = () => {
       <h1>Dashboard de Análise</h1>
       <div className="charts-container">
         <div className="pie-chart-container">
-          <h2>Distribuição de Orçamento</h2>
+          <h2>Sentimentos</h2>
           <div className="chart-wrapper">
             <Pie data={pieChartData} options={pieOptions} />
           </div>
         </div>
         <div className="bar-chart-container">
-          <h2>Detalhes por Categoria</h2>
+          <h2>Detalhes por Sentimento</h2>
           <div className="chart-wrapper">
             {selectedCategory ? (
               <Bar 

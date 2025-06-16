@@ -1,0 +1,108 @@
+.department-page {
+  padding: 20px;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Subtraindo a altura aproximada da navbar */
+  margin: 0;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.department-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chart-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.chart-wrapper {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Garantir que o canvas do gráfico tenha fundo branco e ocupe todo o espaço */
+.chart-wrapper canvas {
+  background-color: white !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .department-page {
+    padding: 15px;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .chart-container {
+    padding: 15px;
+  }
+  
+  .department-title {
+    font-size: 2rem;
+  }
+  
+  .chart-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-page {
+    padding: 10px;
+  }
+  
+  .department-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    padding: 10px;
+  }
+  
+  .chart-title {
+    font-size: 1.2rem;
+  }
+}
