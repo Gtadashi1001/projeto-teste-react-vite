@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 const Profile = () => {
   return (
     <>
-      <Navbar />
+      
       {/* Toolbar vazia para compensar o espaço da Navbar fixa */}
       <Toolbar />
       <Container maxWidth="md" sx={{ mt: 4 }}>
@@ -14,7 +14,7 @@ const Profile = () => {
             <Avatar 
               sx={{ width: 100, height: 100, mb: 2, bgcolor: 'primary.main' }}
             >
-              U
+              
             </Avatar>
             <Typography variant="h4">Meu Perfil</Typography>
           </Box>

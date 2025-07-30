@@ -35,9 +35,12 @@ const Navbar = () => {
       <div className="navbar-right">
         <div className="profile-section">
           <div className="profile-icon">
+            <Link to="/perfil" className="navbar-link" onClick={closeMenu}>
             <span>👤</span>
-          </div>
+          
           <span className="profile-text">Meu Perfil</span>
+          </Link>
+          </div>
         </div>
       </div>
 

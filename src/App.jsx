@@ -8,6 +8,7 @@ import MarketingPage from './pages/MarketingPage'
 import EngenhariaPage from './pages/EngenhariaPage'
 import FinanceiroPage from './pages/FinanceiroPage'
 import VendasPage from './pages/VendasPage'
+import Profile from './pages/Profile'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/engenharia" element={<EngenhariaPage />} />
           <Route path="/financeiro" element={<FinanceiroPage />} />
           <Route path="/vendas" element={<VendasPage />} />
+          <Route path="/perfil" element={<Profile />} />
         </Routes>
       </div>
     </Router>
