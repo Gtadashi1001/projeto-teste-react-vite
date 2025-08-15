@@ -37,30 +37,31 @@ const Login = () => {
       <form className="login-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div className="form-group">
-          <label>Email:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Username"
             required
           />
         </div>
         <div className="form-group">
-          <label>Senha:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Senha"
             required
           />
         </div>
         <button type="submit">Entrar</button>
-        <p>
-          Não tem uma conta?{' '}
-          <span onClick={() => navigate('/register')} className="register-link">
-            Registre-se
-          </span>
-        </p>
+        <button 
+          type="button" 
+          onClick={() => navigate('/register')} 
+          className="secondary-button"
+        >
+          Registre-se
+        </button>
       </form>
     </div>
   );
