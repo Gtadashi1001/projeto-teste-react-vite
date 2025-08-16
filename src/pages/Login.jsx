@@ -10,21 +10,26 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/login', {
+      const bodyData = { email, password };
+      console.log('Dados sendo enviados:', bodyData);
+      
+      const response = await fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify(bodyData),
       });
 
       if (response.ok) {
         const data = await response.json();
         // Salvar o token no localStorage
         localStorage.setItem('token', data.token);
-        navigate('/dashboard');
+        navigate('/');
       } else {
-        alert('Erro ao fazer login');
+        const errorData = await response.json();
+        console.error('Erro do servidor:', errorData);
+        alert(errorData.message || 'Erro ao fazer login');
       }
     } catch (error) {
       console.error('Erro:', error);

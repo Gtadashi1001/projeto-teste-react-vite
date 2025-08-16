@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Dashboard from './components/Dashboard'
+import Dashboard from './pages/Dashboard'
 import TIPage from './pages/TIPage'
 import RHPage from './pages/RHPage'
 import MarketingPage from './pages/MarketingPage'
@@ -27,6 +27,14 @@ function App() {
         
         {/* Rotas protegidas */}
         <Route path="/" element={
+          <PrivateRoute>
+            <>
+              <Navbar />
+              <Dashboard />
+            </>
+          </PrivateRoute>
+        } />
+        <Route path="/dashboard" element={
           <PrivateRoute>
             <>
               <Navbar />
