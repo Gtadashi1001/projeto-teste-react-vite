@@ -1,8 +1,16 @@
 import React from 'react';
-import { Container, Typography, Paper, Box, Avatar, Toolbar } from '@mui/material';
+import { Container, Typography, Paper, Box, Avatar, Toolbar, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const Profile = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
+
   return (
     <>
       
@@ -31,6 +39,22 @@ const Profile = () => {
             <Typography variant="h6" gutterBottom>Preferências</Typography>
             <Typography variant="body1">Tema: Claro</Typography>
             <Typography variant="body1">Notificações: Ativadas</Typography>
+          </Box>
+          
+          <Box mt={3} display="flex" justifyContent="center">
+            <Button 
+              variant="contained" 
+              color="error"
+              onClick={handleLogout}
+              sx={{
+                width: '200px',
+                borderRadius: '20px',
+                textTransform: 'none',
+                fontSize: '1rem'
+              }}
+            >
+              Sair da Conta
+            </Button>
           </Box>
         </Paper>
       </Container>

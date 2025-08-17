@@ -34,14 +34,6 @@ function App() {
             </>
           </PrivateRoute>
         } />
-        <Route path="/dashboard" element={
-          <PrivateRoute>
-            <>
-              <Navbar />
-              <Dashboard />
-            </>
-          </PrivateRoute>
-        } />
         <Route path="/ti" element={
           <PrivateRoute>
             <>
