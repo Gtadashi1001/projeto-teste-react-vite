@@ -4,7 +4,6 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearSca
 import { Pie, Bar } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { pieChartData, barChartData } from '../data/mockData';
-import Navbar from '../components/Navbar';
 
 // Registrar os componentes necessários do Chart.js
 ChartJS.register(
@@ -38,7 +37,6 @@ const Dashboard = () => {
 
   return (
     <>
-      <Navbar />
       {/* Toolbar vazia para compensar o espaço da Navbar fixa */}
       <Toolbar />
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
